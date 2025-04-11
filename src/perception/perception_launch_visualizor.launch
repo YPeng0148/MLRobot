@@ -1,0 +1,14 @@
+<launch>
+	<node name="perception_bessen" pkg="perception" type="perception_node.py"/>
+	<!--node name="perception_master"  pkg="perception"  type="perception_node_simple.py" output="screen" /-->
+        <!--node name="perception_webcam"  pkg="perception"  type="webcam3.py" output="screen" /-->
+        <node name="perception_lidar"  pkg="perception"  type="perception_lidar.py" output="screen" />
+
+  	<node name="delta_lidar"    pkg="delta_lidar"  type="delta_lidar_node">
+    		<param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
+    		<param name="frame_id"            type="string" value="laser"/>
+  	</node>
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find delta_lidar)/rviz/delta_lidar.rviz" />
+</launch> 
+
+

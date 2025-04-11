@@ -1,0 +1,157 @@
+body {
+    background: url("../images/university.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    animation: movingbg 10s linear infinite;
+}
+@keyframes movingbg {
+    from {background-position: 0 0;}
+    to {background-position: 100% 0;}
+}
+#myHeader{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    background-color: rgb(17, 16, 17);
+    color: aqua;
+}
+  
+.container{
+    max-width: 700px;
+    padding: 10px;
+    margin: auto;
+    background: rgb(245, 234, 234);
+    border-radius: 20px;
+}
+.structure {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: black;
+    font-size: 40px;
+}
+.item {
+    width: calc(50% - 10px); /* Subtracting 10px for margin */
+    margin-bottom: 20px;
+    background-color: #ccc;
+    height: 250px;
+    border-radius: 10px;
+}
+.item:hover {
+    background-color:#7ace93;
+  }
+  
+.center {
+    margin: 0 auto;
+    width: calc(50% - 20px); /* Subtracting 20px for margin */
+  }
+  
+form input{
+    cursor: pointer;
+}
+
+h2 {
+    color: rgb(15, 31, 31);
+}
+
+input[type="radio"] {
+    display: none; /* Hide default radio button */
+}
+form label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 19px;
+    cursor: pointer;
+  }
+  
+  form label:hover img {
+    transform: translateY(-100%);
+  }
+  
+  form label:hover h2 {
+    transform: translateY(0);
+  }
+  
+  form input[type=radio]:checked + label h2 {
+    transform: translateY(0);
+  }
+  
+form label img {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+form label h2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  form label {
+    transition: border-color 0.5s ease;
+  }
+  
+  form input[type=radio]:checked + label {
+    border-color: #007bff;
+  }
+  
+  form input[type=radio]:checked + label img {
+    transform: scale(1.5);
+  }
+
+#myButton {
+    display: flex;
+    width:100%;
+    justify-content: center;
+    font-size: 40px;
+    background-color: rgb(17, 16, 17);
+    color: aqua;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    margin-top:20px;
+}
+
+.my-body-class .item.active {
+    background-color: #ce4444;
+}
+
+.contain{
+    background-color: black;
+    color: aqua;
+    border-radius: 10px;
+    font-size: 50px;
+    margin-top: 150px;
+    padding: 20px;
+}
+.robot {
+    position: sticky;
+    margin-top:120px;
+    top: 50%;
+    width: 300px;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: move 1s infinite;
+}
+   

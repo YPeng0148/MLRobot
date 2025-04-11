@@ -1,0 +1,18 @@
+<launch>
+	<node type="b2a.py" name="ultrasound" pkg="perception" output="screen" />
+	<node type="path_planning_node.py" name="path_planning" pkg="path_planning" output="screen"/>
+	<!--node type="compass" name="compass_node" pkg="localization" /--> 
+	<node type="encoders" name="encoders_node" pkg="localization" output="screen"/>  	
+	<!--node type="gps.py" name="gps" pkg="localization" /-->
+
+	<!--node type="robot_pose.py" name="robot_pose_node" pkg="localization"/>
+	<node type="gps_convertion_server.py" name="gps_convertion_server" pkg="localization"/-->
+	
+	<arg name="destination" default="0"/>
+	<node output="screen" type="navigation_node.py" name="navigation_node" pkg="navigation" clear_params="true">
+		<param name="destination" value="$(arg destination)"/>
+	</node>
+
+</launch>
+	
+

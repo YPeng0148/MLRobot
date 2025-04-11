@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>Welcome to Robotic Team</title>
+    </head>
+    <div class="container">
+        
+    <body class="my-body-class">
+        <header id="myHeader">
+            <h1>Pick a destination to Go</h1>
+        </header>
+        <div>
+            <form method="post">
+                <div class="structure">
+                    <div class="item">
+                        <label for="gear">
+                        <input type="radio" id="gear" name="option" value="Hopeman Gear">
+                        <img src="{{ url_for('static', filename='images/gear.jpg') }}" alt="Hopeman Gear">
+                        <h2>Hopeman Gear</h2>
+                    </label>
+                </div>
+                
+                <div class="item"><label for="wegmans">
+                    <input type="radio" id="wegmans" name="option" value="Wegmans Hall">
+                   <img src="{{ url_for('static', filename='images/wegmans.jpg') }}" alt="Wegmans Hall">
+                    <h2>Wegmans Hall</h2>
+                </label></div>
+                
+                <div class="item"><label for="hajim">
+                    <input type="radio" id="hajim" name="option" value="Hajim Statue">
+                    <img src="{{ url_for('static', filename='images/statue.jpg') }}" alt="Wegmans Hall">
+                    <h2>Hajim Statue</h2>
+                </label></div>
+                
+                <div class="item"><label for="tent">
+                    <input type="radio" id="tent" name="option" value="Design Demo">
+                    <img src="{{ url_for('static', filename='images/tent.jpg') }}" alt="Design Tent">
+                    <h2>Design Demo</h2>
+                </label></div>
+                 
+            </div>
+            <input type="submit" id="myButton" value="Go">
+            </form>
+            
+        </div>
+        <script src="{{ url_for('static', filename='scripts/pics.js') }}"> </script>
+          
+    </body>
+    </div>
+</html>

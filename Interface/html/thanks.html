@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>Done</title>
+    </head>
+    <div class="container">
+    <body >
+        <div id="countdown" class="contain"></div>
+        <div id="content" style="display: none;">
+        <header id="myHeader">
+            <h1>Hooray! Let's Go Now</h1>
+        </header>
+        <h2 id="myHeader">
+            Heading to {{ name}}
+        </h2>
+        <div>
+        <img class="robot" src="{{ url_for('static', filename='images/move.gif') }}" alt="Little Robot">
+        </div>
+        <button id='myButton' onclick="window.location.href='/'">Go back to home page</button>
+       
+        </div>
+        <script src="{{ url_for('static', filename='scripts/count.js') }}"> </script>
+    </body>
+</div>
+</html>
